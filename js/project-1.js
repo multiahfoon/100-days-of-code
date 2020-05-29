@@ -5,7 +5,7 @@ const bodyColor = document.getElementById('bodyColor');
 let rgb = []
 const colorNum = () => {
     for(var i = 1; i <= 3; i++){
-        rgb.push(Math.floor(Math.random()*224));
+        rgb.push(Math.floor(Math.random()*255));
     }
 }
 
