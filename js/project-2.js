@@ -11,4 +11,8 @@ const colorGen = () => {
     }
     console.log(color);
 }
-colorGen();
+
+// add listener to button
+colorBtn.addEventListener('click', () => {
+    colorGen();
+})
