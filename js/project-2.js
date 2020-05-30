@@ -1,11 +1,14 @@
 // change background color of body and display current rgb color
-// generate background color 
 const bodyColor = document.getElementById('bodyColor');
 const colorBtn = document.getElementById('colorBtn');
 
+// generate background color 
 let color = [];
 const colorGen = () => {
+    color = [];
     for(var i = 1; i <= 3; i++){
-        Math.floor(Math.random()*225);    
+        color.push(Math.floor(Math.random()*225));    
     }
+    console.log(color);
 }
+colorGen();
