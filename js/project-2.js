@@ -1,6 +1,7 @@
 // change background color of body and display current rgb color
 const bodyColor = document.getElementById('bodyColor');
 const colorBtn = document.getElementById('colorBtn');
+const colorDisplayText = document.getElementById('colorDisplayText');
 
 // generate background color 
 let color = [];
@@ -16,4 +17,5 @@ const colorGen = () => {
 colorBtn.addEventListener('click', () => {
     colorGen();
     bodyColor.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+    colorDisplayText.innerHTML =  `Current color: rgb(${color[0]}, ${color[1]}, ${color[2]})`
 })
