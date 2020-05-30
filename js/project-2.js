@@ -15,4 +15,5 @@ const colorGen = () => {
 // add listener to button
 colorBtn.addEventListener('click', () => {
     colorGen();
+    bodyColor.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 })
