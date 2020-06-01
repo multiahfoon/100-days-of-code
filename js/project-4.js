@@ -3,3 +3,8 @@
 const messageInput = document.getElementById('messageInput');
 const messageBtn = document.getElementById('messageBtn');
 const messageDisplay = document.getElementById('messageDisplay');
+
+let message = [];
+messageBtn.addEventListener('click', ()=>{
+
+});
