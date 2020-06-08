@@ -7,7 +7,7 @@ let twoSums = [];
 
 // generate two values for equation
 for(let i = 0; i < 2; i++){
-    let randomNum = Math.floor(Math.random()*11);
+    let randomNum = Math.floor(Math.random()*9)+1;
     twoSums.push(randomNum);
 }
 console.log(twoSums);
