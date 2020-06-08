@@ -10,5 +10,16 @@ for(let i = 0; i < 2; i++){
     let randomNum = Math.floor(Math.random()*9)+1;
     twoSums.push(randomNum);
 }
-console.log(twoSums);
+
+// calculate total
+let total = eval(twoSums[0]+twoSums[1]);
+
+
+// display equation
+let equation = `${twoSums[0]} + ${twoSums[1]} = ?`;
+equationDisplay.innerText = equation;
+
+
+
+
 // display equations
