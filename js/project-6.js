@@ -10,5 +10,5 @@ let twoSums = [];
 for(let i = 0; i <= 1; i++){
  twoSums.push(randomNum);
 }
-
+console.log(twoSums);
 // display equations
