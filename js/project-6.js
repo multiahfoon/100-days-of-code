@@ -1,7 +1,7 @@
 // Problem soliving app
 const equationDisplay = document.getElementById('equationDisplay');
 const userGuess = document.getElementById('userGuess');
-const check = document.getElementById('check');
+const checkBtn = document.getElementById('checkBtn');
 
 let answer = false;
 let twoSums = [];
@@ -25,14 +25,26 @@ equationDisplay.innerText = equation;
 // auto select input field so user can type
 userGuess.focus();
 console.log(total);
+
 // check users guess
-check.addEventListener('click', () => {
+const checkGuess = () => {
     let guess = userGuess.value;
     console.log(guess);
     if(guess == total){
         console.log("you got it right");
     }else{
         // not working
-        userGuess.innerText = "";
+        userGuess.value = "";
+        userGuess.focus();
+    }
+}
+checkBtn.addEventListener('click', () => {
+    checkGuess();
+});
+
+userGuess.addEventListener("keydown", (e) => {
+    if(e.keyCode === 13){
+        checkGuess();
+        console.log("enter");
     }
 });
