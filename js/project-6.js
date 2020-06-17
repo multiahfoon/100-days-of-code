@@ -2,8 +2,9 @@
 const equationDisplay = document.getElementById('equationDisplay');
 const userGuess = document.getElementById('userGuess');
 const checkBtn = document.getElementById('checkBtn');
+const answer = document.getElementById('answer');
 
-let answer = false;
+// let answer = false;
 let twoSums = [];
 
 const genEquation = () => {
@@ -36,18 +37,15 @@ const checkGuess = () => {
     let guess = userGuess.value;
     console.log(guess);
     if(guess == total){
-        console.log(total);
-        userGuess.value = "";
         twoSums = [];
         genEquation();
         total = eval(twoSums[0]+twoSums[1]);
-        console.log("you got it right");
-        console.log(total);
+        answer.innerText = "✓";
     }else{
-        // not working
-        userGuess.value = "";
-        userGuess.focus();
+        answer.innerText = "✗";
     }
+    userGuess.value = "";
+    userGuess.focus();
 }
 
 checkBtn.addEventListener('click', () => {
@@ -60,3 +58,8 @@ userGuess.addEventListener("keydown", (key) => {
         console.log("enter");
     }
 });
+
+// Display when users gets correct total
+// Display when users gets incorrect total
+// Add timer
+// two player mode
